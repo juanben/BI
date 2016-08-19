@@ -51,11 +51,11 @@ sub main
    while ($contenido =~ /([^\.]+)/g)
    {
 	   $valor = $1;
-       $valor =~ s/\n//g;
+       $valor =~ s/\n/ /g;
 	   $salida.= "$valor\."."\n";
    }
    $salida =~ s/(Mr\.)\s+/$1 /g;
-   $salida =~ s/[\[\]\_\*\+]+//g;
+   $salida =~ s/[\[\]\_\*\+]+/ /g;
    $salida =~ s/^[^\w]+//gm;
    
    @oraciones = split(/\n/,$salida);
@@ -181,8 +181,10 @@ sub main
 	 #$arff.= $oraciones[$i]."\n";
    }
    $arff =~ s/no,no,no,no,no,0,0,0,0,[0-9]+,[A-z]+,//g;
-   $arff =~ s/^\?//gm;
-   
+   $arff =~ s/[A-z]+,[A-z]+,[A-z]+,[A-z]+,[A-z]+,0,0,0,0,[0-4],[A-z]+,//g;
+   $arff =~ s/yes,no,no,no,no,0,0,0,0,[0-9]+,[A-z]+,//g;
+   $arff =~ s/^\?\s+//gm;
+     
     &writeFile($fileName, $arff);
   
 }
