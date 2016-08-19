@@ -1,0 +1,22 @@
+@relation prueba
+@attribute AGE numeric
+@attribute SPLEENPALPABLE: numeric
+@attribute SEX numeric 
+@attribute STEROI numeric
+@attribute ANTIVIRALS numeric
+@attribute FATIGUE numeric
+@attribute FATIGUE numeric
+@attribute MALAISE numeric
+@attribute ANOREXIA numeric
+@attribute LIVERBIG numeric
+@attribute LIVERFIRM numeric
+@attribute SPIDERS numeric
+@attribute ASCITES numeric
+@attribute VARICES numeric
+@attribute BILIRUBIN numeric
+@attribute ALKPHOSPHATE numeric
+@attribute SGOT numeric
+@attribute ALBUMIN numeric
+@attribute PROTIME numeric
+@attribute HISTOLOGY numeric
+@attribute Class {1,2}

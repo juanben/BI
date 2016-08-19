@@ -1,0 +1,53 @@
+@relation emocion
+
+@attribute noun {yes,no}
+@attribute prepositional {yes,no}
+@attribute CoordinatingConjunction {yes,no}
+@attribute SubordinatingConjunction {yes,no}
+@attribute ConjuntiveAdverbs {yes,no}
+@attribute verbPositive real
+@attribute verbNegative real
+@attribute adjetivePositive real
+@attribute adjetiveNegative real
+@attribute numPalabras real
+@attribute puntiacion {yes,no}
+@attribute resul {neutro,positivo,negativo}
+
+@data
+yes,yes,no,no,no,0,1,0,0,53,yes,? 
+yes,yes,no,no,no,0,1,0,0,27,yes,? 
+yes,yes,no,no,no,0,0,0,0,15,yes,? 
+yes,yes,no,no,no,0,1,0,0,14,yes,? 
+yes,yes,no,no,no,0,1,0,0,8,yes,? 
+yes,yes,no,no,no,0,1,0,0,6,yes,? 
+yes,yes,no,no,yes,0,1,0,0,38,yes,? 
+yes,yes,no,yes,no,0,0,0,1,33,yes,? 
+yes,yes,no,no,no,0,1,0,0,28,yes,? 
+yes,yes,no,no,yes,0,2,0,0,28,yes,? 
+yes,yes,no,yes,no,0,5,0,0,52,yes,? 
+yes,yes,no,no,no,0,1,0,0,31,yes,? 
+yes,yes,no,yes,no,0,2,0,0,24,yes,? 
+yes,yes,no,yes,no,0,0,0,0,32,yes,? 
+yes,yes,no,no,no,0,2,0,0,37,yes,? 
+yes,yes,no,no,no,0,1,0,0,13,yes,? 
+yes,yes,no,no,no,0,3,0,0,44,yes,? 
+yes,yes,no,no,no,0,0,0,0,22,yes,? 
+yes,yes,no,no,no,0,1,0,0,25,yes,? 
+yes,yes,no,no,no,0,1,0,0,18,yes,? 
+yes,yes,no,no,no,0,1,0,0,21,yes,? 
+yes,yes,no,no,no,0,0,0,0,27,yes,? 
+yes,yes,no,no,no,0,1,0,0,30,yes,? 
+yes,yes,no,no,no,0,2,0,0,31,yes,? 
+yes,yes,no,no,no,0,1,0,0,66,yes,? 
+yes,yes,no,no,no,0,2,0,0,31,yes,? 
+yes,yes,no,no,no,0,0,1,0,18,yes,? 
+yes,yes,no,no,no,0,2,0,0,29,yes,? 
+yes,yes,no,no,no,0,0,0,0,14,yes,? 
+yes,yes,no,yes,no,0,1,1,0,15,yes,? 
+yes,yes,no,no,no,0,1,0,0,14,yes,? 
+yes,yes,no,no,no,0,0,1,0,18,yes,? 
+yes,yes,no,yes,no,0,1,1,0,30,yes,? 
+yes,yes,no,no,no,0,0,0,0,9,yes,? 
+yes,yes,no,yes,no,0,1,0,0,44,yes,? 
+yes,yes,no,no,no,0,0,0,0,23,yes,? 
+yes,yes,no,no,no,0,2,0,0,36,yes,? 

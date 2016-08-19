@@ -1,0 +1,60 @@
+@relation entrenar
+@attribute AGE numeric
+@attribute SEX numeric
+@attribute STEROI numeric
+@attribute ANTIVIRALS numeric
+@attribute FATIGUE numeric
+@attribute MALAISE numeric
+@attribute ANOREXIA numeric
+@attribute LIVERBIG numeric
+@attribute LIVERFIRM numeric
+@attribute SPLEENPALPABLE: numeric
+@attribute SPIDERS numeric
+@attribute ASCITES numeric
+@attribute VARICES numeric
+@attribute BILIRUBIN numeric
+@attribute ALKPHOSPHATE numeric
+@attribute SGOT numeric 
+@attribute ALBUMIN numeric
+@attribute PROTIME numeric
+@attribute HISTOLOGY numeric
+@attribute Class {1,2}
+@data
+yes,yes,no,no,no,0,1,0,0,53,yes,negativo
+yes,yes,no,no,no,0,1,0,0,27,yes,neutro
+yes,yes,no,no,no,0,0,0,0,15,yes,neutro
+yes,yes,no,no,no,0,1,0,0,14,yes,neutro
+yes,yes,no,no,no,0,1,0,0,8,yes,neutro
+yes,yes,no,no,no,0,1,0,0,6,yes,neutro
+yes,yes,no,no,yes,0,1,0,0,38,yes,neutro
+yes,yes,no,yes,no,0,0,0,1,33,yes,negativo
+yes,yes,no,no,no,0,1,0,0,28,yes,neutro
+yes,yes,no,no,yes,0,2,0,0,28,yes,negativo
+yes,yes,no,yes,no,0,5,0,0,52,yes,negativo
+yes,yes,no,no,no,0,1,0,0,31,yes,neutro
+yes,yes,no,yes,no,0,2,0,0,24,yes,negativo
+yes,yes,no,yes,no,0,0,0,0,32,yes,neutro
+yes,yes,no,no,no,0,2,0,0,37,yes,negativo
+yes,yes,no,no,no,0,1,0,0,13,yes,neutro
+yes,yes,no,no,no,0,3,0,0,44,yes,negativo
+yes,yes,no,no,no,0,0,0,0,22,yes,neutro
+yes,yes,no,no,no,0,1,0,0,25,yes,neutro
+yes,yes,no,no,no,0,1,0,0,18,yes,neutro
+yes,yes,no,no,no,0,1,0,0,21,yes,neutro
+yes,yes,no,no,no,0,0,0,0,27,yes,neutro
+yes,yes,no,no,no,0,1,0,0,30,yes,neutro
+yes,yes,no,no,no,0,2,0,0,31,yes,neutro
+yes,yes,no,no,no,0,1,0,0,66,yes,negativo
+yes,yes,no,no,no,0,2,0,0,31,yes,neutro
+yes,yes,no,no,no,0,0,1,0,18,yes,neutro
+yes,yes,no,no,no,0,2,0,0,29,yes,neutro
+yes,yes,no,no,no,0,0,0,0,14,yes,neutro
+yes,yes,no,yes,no,0,1,1,0,15,yes,negativo
+yes,yes,no,no,no,0,1,0,0,14,yes,neutro
+yes,yes,no,no,no,0,0,1,0,18,yes,neutro
+yes,yes,no,yes,no,0,1,1,0,30,yes,neutro
+yes,yes,no,no,no,0,0,0,0,9,yes,neutro
+yes,yes,no,yes,no,0,1,0,0,44,yes,neutro
+yes,yes,no,no,no,0,0,0,0,23,yes,neutro
+yes,yes,no,no,no,0,2,0,0,36,yes,neutro
+
