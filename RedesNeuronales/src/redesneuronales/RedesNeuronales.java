@@ -18,10 +18,12 @@ import java.util.regex.Pattern;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.trees.J48;
 
+
 public class RedesNeuronales {
 
     public void perceptron_multicapa(String dir, int x) {
         try {
+
             //Llamar funcion para generar el nuevo archivo Arff
             generarArff();
             // Llamar al archivo .arff
@@ -36,13 +38,27 @@ public class RedesNeuronales {
             Evaluation ev = new Evaluation(instancias);
 
             ev.evaluateModel(red, instancias);
+            System.out.println("Naive Bayes");
             //impresion de instancias y Matriz de confución
            // System.out.println(instancias);
-            System.out.println(ev.toSummaryString("Resultado ", true));
+            System.out.println(ev.toSummaryString("Resultado NaiveBayes ", true));
             System.out.println(ev.toMatrixString("Matriz de confucion"));
             String salida="";
             ArrayList<String> arreglo = new ArrayList();
-            //salida deseada
+            
+            //Usando J48 
+            System.out.println("Algoritmo con J48");
+            J48 red1 = new  J48();
+            red1.buildClassifier(instancias);
+            //evaluar modelo
+            Evaluation ev1 = new Evaluation(instancias);
+            ev1.evaluateModel(red1, instancias);
+            //impresion de instancias y Matriz de confución
+           // System.out.println(instancias);
+            System.out.println(ev1.toSummaryString("Algoritmo J48 ",true));
+            System.out.println(ev1.toMatrixString("Matriz de confucion"));
+          
+//salida deseada
             if (x == 1) 
             {
                 System.out.println("Salida Deseada");
@@ -136,53 +152,38 @@ public class RedesNeuronales {
         {
             bw = new BufferedWriter(new FileWriter(archivo));
             bw.write("@relation entrenar\r\n" +
-            "@attribute AGE numeric\r\n" +
-            "@attribute SEX numeric\r\n" +
-            "@attribute STEROI numeric\r\n" +
-            "@attribute ANTIVIRALS numeric\r\n" +
-            "@attribute FATIGUE numeric\r\n" +
-            "@attribute MALAISE numeric\r\n" +
-            "@attribute ANOREXIA numeric\r\n" +
-            "@attribute LIVERBIG numeric\r\n" +
-            "@attribute LIVERFIRM numeric\r\n" +
-            "@attribute SPLEENPALPABLE: numeric\r\n" +
-            "@attribute SPIDERS numeric\r\n" +
-            "@attribute ASCITES numeric\r\n" +
-            "@attribute VARICES numeric\r\n" +
-            "@attribute BILIRUBIN numeric\r\n" +
-            "@attribute ALKPHOSPHATE numeric\r\n" +
-            "@attribute SGOT numeric \r\n" +
-            "@attribute ALBUMIN numeric\r\n" +
-            "@attribute PROTIME numeric\r\n" +
-            "@attribute HISTOLOGY numeric\r\n" +
-            "@attribute Class {1,2}\r\n" +
+            "@attribute noun {yes,no}\r\n" +
+            "@attribute prepositional {yes,no}\r\n" +
+            "@attribute CoordinatingConjunction {yes,no}\r\n" +
+            "@attribute SubordinatingConjunction {yes,no}\r\n" +
+            "@attribute ConjuntiveAdverbs {yes,no}\r\n" +
+            "@attribute verbPositive real\r\n" +
+            "@attribute verbNegative real\r\n" +
+            "@attribute adjetivePositive real\r\n" +
+            "@attribute adjetiveNegative real\r\n" +
+            "@attribute numPalabras real\r\n" +
+            "@attribute puntiacion {yes,no}\r\n" +
+            "@attribute resul {neutro,positivo,negativo}\r\n"+
             "@data\r\n");
-        } 
+        }
         else
         {
-           bw = new BufferedWriter(new FileWriter(archivo));
+            bw = new BufferedWriter(new FileWriter(archivo));
             bw.write("@relation entrenar\r\n" +
-            "@attribute AGE numeric\r\n" +
-            "@attribute SEX numeric\r\n" +
-            "@attribute STEROI numeric\r\n" +
-            "@attribute ANTIVIRALS numeric\r\n" +
-            "@attribute FATIGUE numeric\r\n" +
-            "@attribute MALAISE numeric\r\n" +
-            "@attribute ANOREXIA numeric\r\n" +
-            "@attribute LIVERBIG numeric\r\n" +
-            "@attribute LIVERFIRM numeric\r\n" +
-            "@attribute SPLEENPALPABLE: numeric\r\n" +
-            "@attribute SPIDERS numeric\r\n" +
-            "@attribute ASCITES numeric\r\n" +
-            "@attribute VARICES numeric\r\n" +
-            "@attribute BILIRUBIN numeric\r\n" +
-            "@attribute ALKPHOSPHATE numeric\r\n" +
-            "@attribute SGOT numeric \r\n" +
-            "@attribute ALBUMIN numeric\r\n" +
-            "@attribute PROTIME numeric\r\n" +
-            "@attribute HISTOLOGY numeric\r\n" +
-            "@attribute Class {1,2}\r\n" +
+            "@attribute noun {yes,no}\r\n" +
+            "@attribute prepositional {yes,no}\r\n" +
+            "@attribute CoordinatingConjunction {yes,no}\r\n" +
+            "@attribute SubordinatingConjunction {yes,no}\r\n" +
+            "@attribute ConjuntiveAdverbs {yes,no}\r\n" +
+            "@attribute verbPositive real\r\n" +
+            "@attribute verbNegative real\r\n" +
+            "@attribute adjetivePositive real\r\n" +
+            "@attribute adjetiveNegative real\r\n" +
+            "@attribute numPalabras real\r\n" +
+            "@attribute puntiacion {yes,no}\r\n" +
+            "@attribute resul {neutro,positivo,negativo}\r\n"+
             "@data\r\n");
+            
         }
            bw.close();      
     }

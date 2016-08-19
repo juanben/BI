@@ -5,17 +5,23 @@
  */
 package redesneuronales;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ *
+ * @author Juan
+ */
 public class Principal {
-    public static void main(String[] args) throws IOException 
+
+    /**
+     * @param args the command line arguments
+     */
+     public static void main(String[] args) throws IOException 
     {
         String  dir ="../RedesNeuronales/src/arff/prueba.arff";
         RedesNeuronales red = new RedesNeuronales();
         red.perceptron_multicapa(dir, 1);
         
     }
+    
 }
